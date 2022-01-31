@@ -4,14 +4,14 @@ namespace KataDiamond
 {
     class Program
     {
-        static int totalCharsPerLine;
-        static int firstCharPosPlusSecondCharPos;
-        static int firstCharPosition, secondCharPosition;
-        static int diamondHeight;
-        static int diamondCharAscii;
-        static int startCharAscii;
+        private static int totalCharsPerLine;
+        private static int firstCharPosPlusSecondCharPos;
+        private static int firstCharPosition, secondCharPosition;
+        private static int diamondHeight;
+        private static int diamondCharAscii;
+        private static int startCharAscii;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Enter alphabet to print diamond for.");
 
@@ -32,7 +32,7 @@ namespace KataDiamond
             }
         }
 
-        static bool ValidateDiamondInput(string input)
+        private static bool ValidateDiamondInput(string input)
         {
             if (String.IsNullOrWhiteSpace(input) ||
                input.Trim().Length != 1 ||
@@ -52,7 +52,7 @@ namespace KataDiamond
             firstCharPosition = secondCharPosition = 0;
         }
 
-        static void PrintUpperHalfOfDiamond()
+        private static void PrintUpperHalfOfDiamond()
         {
             int currentCharAscii = startCharAscii;
 
@@ -76,7 +76,7 @@ namespace KataDiamond
             }
         }
 
-        static void PrintLowerHalfOfDiamond()
+        private static void PrintLowerHalfOfDiamond()
         {
             int currentCharAscii = diamondCharAscii - 1;
 
